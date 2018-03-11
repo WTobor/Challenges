@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Linq;
 
 namespace Challenges
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var input = Enumerable.Range(1, 100).ToList();
+            input.ForEach(i => Console.Write(FizzBuzz.GetFizzBuzzValue(i) + '\n'));
+            Console.ReadKey();
         }
     }
 }
